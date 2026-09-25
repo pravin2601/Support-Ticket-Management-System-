@@ -1,0 +1,1 @@
+package com.example.supportticket.dto; import com.example.supportticket.model.*; import java.time.Instant; import java.util.List; public record TicketDetailResponse(Long id,String title,String description,TicketPriority priority,TicketStatus status,String assignee,Instant createdAt,Instant updatedAt,List<CommentResponse> comments){}

@@ -1,0 +1,5 @@
+# State Machine
+
+Allowed: `OPEN -> IN_PROGRESS`, `OPEN -> CANCELLED`, `IN_PROGRESS -> RESOLVED`, `IN_PROGRESS -> CANCELLED`, `RESOLVED -> CLOSED`. `CLOSED` and `CANCELLED` are terminal. Same-state requests are idempotent.
+
+Forbidden examples: CLOSED->OPEN, RESOLVED->OPEN, CANCELLED->OPEN, OPEN->RESOLVED, OPEN->CLOSED, IN_PROGRESS->CLOSED.
